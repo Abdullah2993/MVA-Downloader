@@ -104,7 +104,8 @@
                 }).then(function(data) {
                   var $videoList = $('MediaSource', data)
                   var $subtitle = $('MarkerResourceSource', data)
-                  var videoHtml = '<p>'
+                  var $videoTitle = $('Title',data)
+                  var videoHtml = '<p>' + $videoTitle.text() + '<br />'                
                   var videoName
                   $videoList.each(function() {
                     var $video = $(this)
@@ -136,3 +137,4 @@
 </body>
 
 </html>
+
