@@ -105,14 +105,14 @@
                   var $videoList = $('MediaSource', data)
                   var $subtitle = $('MarkerResourceSource', data)
                   var $videoTitle = $('Title',data)
-                  var videoHtml = '<p>' + $videoTitle.text() + '<br />'                
+                  var videoHtml = '<p>' + $videoTitle.html() + '<br />'                
                   var videoName
                   $videoList.each(function() {
                     var $video = $(this)
                     var videoUrl = $video.html()
                     if(videoUrl && !/manifest$/.test(videoUrl)) {
                       videoName = videoName || videoUrl.match(/([^\/]+?)\.[^\.]+?$/)[1]
-                      videoHtml += '<a href="' + videoUrl + '" download>Video(' + $video.attr('videoMode') + ')</a>&nbsp;&nbsp;'
+                      videoHtml += '<a href="/video?url=' + encodeURIComponent(videoUrl) + '&title=' + encodeURIComponent($videoTitle.html()) + '" target="_blank">Video(' + $video.attr('videoMode') + ')</a>&nbsp;&nbsp;'
                     }
                   })
                   videoName = videoName || materialId
