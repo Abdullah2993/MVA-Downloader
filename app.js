@@ -75,8 +75,8 @@ app.get('/proxy', function (req, res, next) {
 })
 
 app.get('/video',function(req,res,next){
-  var videoUrl = decodeURIComponent(req.query.url)
-  var videoTitle = decodeURIComponent(req.query.title)
+  var videoUrl = req.query.url  
+  var videoTitle = decodeURIComponent(req.query.title)  
   res.render("video",{url: videoUrl,title: videoTitle})
 })
 

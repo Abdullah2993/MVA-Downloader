@@ -109,7 +109,7 @@
                   var videoName
                   $videoList.each(function() {
                     var $video = $(this)
-                    var videoUrl = $video.html()
+                    var videoUrl = $video.text()
                     if(videoUrl && !/manifest$/.test(videoUrl)) {
                       videoName = videoName || videoUrl.match(/([^\/]+?)\.[^\.]+?$/)[1]
                       videoHtml += '<a href="/video?url=' + encodeURIComponent(videoUrl) + '&title=' + encodeURIComponent($videoTitle.html()) + '" target="_blank">Video(' + $video.attr('videoMode') + ')</a>&nbsp;&nbsp;'
