@@ -12,7 +12,7 @@ node bin/server
 # then visit 127.0.0.1:3000 as follow
 ```
 
-![screenshot](https://raw.githubusercontent.com/hujinglin/MVA-Downloader/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/abdullah2993/MVA-Downloader/for_idm/screenshot.png)
 
 
 
